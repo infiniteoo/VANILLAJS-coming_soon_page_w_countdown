@@ -21,5 +21,15 @@ const interval = setInterval(() => {
   const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  console.log(days, hours, mins, seconds);
+  // display result
+  countdown.innerHTML = `
+  
+    
+    
+    <div><span>${days}</span></div>
+    <div><span>${hours}</span></div>
+    <div><span>${mins}</span></div>
+    <div><span>${seconds}</span></div>
+  
+  `;
 }, 1000);
