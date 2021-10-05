@@ -54,3 +54,12 @@ body {
   opacity: 0.7;
   background: #000;
 }
+
+.countdown div:first-child {
+  background: #17a2b8;
+}
+
+.countdown span {
+  display: block;
+  font-size: 25px;
+}
