@@ -10,3 +10,11 @@ body {
   background: #333;
   overflow: hidden;
 }
+
+.landing {
+  position: relative;
+  background-image: url(../img/showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
