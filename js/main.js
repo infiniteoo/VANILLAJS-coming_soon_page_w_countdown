@@ -3,8 +3,6 @@ const countdown = document.querySelector(".countdown");
 // set launch date (ms)
 const launchDate = new Date("Jan 1, 2022 13:00:00").getTime();
 
-console.log(launchDate);
-
 // update every section
 const interval = setInterval(() => {
   // get today's date and time (in ms)
@@ -23,13 +21,18 @@ const interval = setInterval(() => {
 
   // display result
   countdown.innerHTML = `
-  
-    
-    
-    <div><span>${days}</span></div>
-    <div><span>${hours}</span></div>
-    <div><span>${mins}</span></div>
-    <div><span>${seconds}</span></div>
-  
+    <div>${days}<span> Days</span></div>
+    <div>${hours}<span> Hours</span></div>
+    <div>${mins}<span> Minutes</span></div>
+    <div>${seconds}<span> Seconds</span></div>
   `;
+
+  // if launch date passed
+  if (distance < 0) {
+    // stop countdown
+    clearInterval(interval);
+    // style and output text
+    countdown.style.color = "#17a2b8";
+    countdown.innerHTML = "Launched!";
+  }
 }, 1000);
